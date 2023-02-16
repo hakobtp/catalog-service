@@ -42,9 +42,9 @@ jobs:
         with:
           #Fetches the report from the output of the previous step
           sarif_file: ${{ steps.scan.outputs.sarif }}
-      - name: Build, unit tests and integration tests
+      - name: Build, unit tests and integration tests1
         #Ensures the Gradle wrapper is executable, solving Windows incompatibilities
         #Runs the Gradle build task, which compiles the codebase and runs unit and integration tests
-        run: |
-          chmod +x gradlew
-          ./gradlew build
+        run: chmod +x gradlew
+      - name: Build, unit tests and integration tests2
+        run: ./gradlew build
