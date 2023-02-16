@@ -45,6 +45,6 @@ jobs:
       - name: Build, unit tests and integration tests1
         #Ensures the Gradle wrapper is executable, solving Windows incompatibilities
         #Runs the Gradle build task, which compiles the codebase and runs unit and integration tests
-        run: chmod +x gradlew
-      - name: Build, unit tests and integration tests2
-        run: ./gradlew build
+        run: |
+          chmod +x gradlew \
+          ./gradlew build
