@@ -81,7 +81,7 @@ class CatalogServiceApplicationTests {
                 .expectStatus().isOk()
                 .expectBody(Book.class).value(actualBook -> {
                     assertThat(actualBook).isNotNull();
-                    assertThat(actualBook.price()).isEqualTo(2);
+                    assertThat(actualBook.price()).isEqualTo(bookToUpdate.price());
                 });
     }
 
